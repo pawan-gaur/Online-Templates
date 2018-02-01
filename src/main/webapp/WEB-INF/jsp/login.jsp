@@ -14,10 +14,11 @@
 <body>
 
 	<%@include file="/WEB-INF/jsp/shared/navbar.jsp"%>
-
-	<div class="container" id="homeDiv">
-		<div class="jumbotron text-center">
-			<h1>login</h1>
+	<div class="container" style="margin-top: 80px">
+		<div class="container" id="homeDiv">
+			<div class="jumbotron text-center">
+				<h1>login</h1>
+			</div>
 		</div>
 	</div>
 	<script src="static/js/jquery.js"></script>

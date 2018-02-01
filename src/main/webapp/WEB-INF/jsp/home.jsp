@@ -14,84 +14,86 @@
 <body>
 
 	<%@include file="/WEB-INF/jsp/shared/navbar.jsp"%>
-
-	<c:choose>
-		<c:when test="${mode == 'MODE_TASKS'}">
-			<div class="container text-center" id="tasksDiv">
-				<h3>My Tasks</h3>
-				<hr>
-				<div class="table-responsive">
-					<table class="table table-stripped table-bordered text-left">
-						<thead>
-							<tr>
-								<th>Id</th>
-								<th>Name</th>
-								<th>Description</th>
-								<th>Date Created</th>
-								<th>Finished</th>
-								<th>Update</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach var="tasks" items="${tasks}">
+	<div class="container" style="margin-top: 80px">
+		<c:choose>
+			<c:when test="${mode == 'MODE_TASKS'}">
+				<div class="container text-center" id="tasksDiv">
+					<h3>My Tasks</h3>
+					<hr>
+					<div class="table-responsive">
+						<table class="table table-stripped table-bordered text-left">
+							<thead>
 								<tr>
-									<td>${tasks.id}</td>
-									<td>${tasks.name}</td>
-									<td>${tasks.description}</td>
-									<td>${tasks.dateCreated}</td>
-									<td>${tasks.finished}</td>
-									<td><a href="update-tasks?id=${tasks.id}"><span
-											class="glyphicon glyphicon-pencil"></span></a></td>
-									<td><a href="delete-tasks?id=${tasks.id}"><span
-											class="glyphicon glyphicon-trash"></span></a></td>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Date Created</th>
+									<th>Finished</th>
+									<th>Update</th>
+									<th>Delete</th>
 								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								<c:forEach var="tasks" items="${tasks}">
+									<tr>
+										<td>${tasks.id}</td>
+										<td>${tasks.name}</td>
+										<td>${tasks.description}</td>
+										<td>${tasks.dateCreated}</td>
+										<td>${tasks.finished}</td>
+										<td><a href="update-tasks?id=${tasks.id}"><span
+												class="glyphicon glyphicon-pencil"></span></a></td>
+										<td><a href="delete-tasks?id=${tasks.id}"><span
+												class="glyphicon glyphicon-trash"></span></a></td>
+									</tr>
+								</c:forEach>
+							</tbody>
+						</table>
+					</div>
 				</div>
-			</div>F
 		</c:when>
 
-		<c:when test="${mode == 'MODE_NEW' || mode =='MODE_UPDATE'}">
-			<div class="container text-center">
-				<h3>Manage Task</h3>
-				<hr>
-				<form class="form-horizontal" method="post" action="save-task">
-					<input type="hidden" name="id" value="${task.id}" />
-					<div class="form-group">
-						<label class="control-label col-md-3">Name</label>
-						<div class="col-md-7">
-							<input type="text" class="form-control" name="name"
-								value="${task.name}">
+			<c:when test="${mode == 'MODE_NEW' || mode =='MODE_UPDATE'}">
+				<div class="container text-center">
+					<h3>Manage Task</h3>
+					<hr>
+					<form class="form-horizontal" method="post" action="save-task">
+						<input type="hidden" name="id" value="${task.id}" />
+						<div class="form-group">
+							<label class="control-label col-md-3">Name</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="name"
+									value="${task.name}">
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<label class="control-label col-md-3">Description</label>
-						<div class="col-md-7">
-							<input type="text" class="form-control" name="description"
-								value="${task.description}">
+						<div class="form-group">
+							<label class="control-label col-md-3">Description</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="description"
+									value="${task.description}">
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<label class="control-label col-md-3">Finished</label>
-						<div class="col-md-7">
-							<input type="radio" class="col-sm-1" name="finished" value="true" />
-							<div class="col-sm-1">Yes</div>
-							<input type="radio" class="col-sm-1" name="finished"
-								value="false" checked />
-							<div class="col-sm-1">No</div>
+						<div class="form-group">
+							<label class="control-label col-md-3">Finished</label>
+							<div class="col-md-7">
+								<input type="radio" class="col-sm-1" name="finished"
+									value="true" />
+								<div class="col-sm-1">Yes</div>
+								<input type="radio" class="col-sm-1" name="finished"
+									value="false" checked />
+								<div class="col-sm-1">No</div>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-primary" value="Save" />
-					</div>
-				</form>
-			</div>
-		</c:when>
-	</c:choose>
+						<div class="form-group">
+							<input type="submit" class="btn btn-primary" value="Save" />
+						</div>
+					</form>
+				</div>
+			</c:when>
+		</c:choose>
+	</div>
 
 	<script src="static/js/jquery.js"></script>
 	<script src="static/js/bootstrap.min.js"></script>
