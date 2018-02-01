@@ -20,15 +20,15 @@
 </head>
 <style>
 #image_div {
-    background-image: url(static/images/hero_background.png);
-    width: 1368px;
-    height: 357px;
-    margin-left: -115px;
-    margin-top: -110px;
+	background-image: url(static/images/hero_background.png);
+	width: 1368px;
+	height: 450px;
+	margin-left: -115px;
+	margin-top: -110px;
 }
 
 .image-text {
-	padding-top: 100px;
+	padding-top: 150px;
 	text-transform: none;
 	position: static;
 	color: #fff;
@@ -47,7 +47,7 @@
 .helper-text {
 	position: sticky;
 	color: #fff;
-	padding-top: 30px;
+	padding-top: 20px;
 	text-align: center;
 	font-weight: 400;
 	left: 0;
@@ -58,7 +58,7 @@
 
 .form-inline {
 	padding-top: 25px;
-	padding-left: 12%;
+	padding-left: 150px;
 }
 
 #inlineFormInputGroup {
@@ -119,6 +119,10 @@
 				</div>
 			</form>
 		</div>
+
+
+
+
 	</div>
 	<script src="static/js/jquery.js"></script>
 	<script src="static/js/bootstrap.min.js"></script>
