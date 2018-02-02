@@ -8,22 +8,27 @@
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
 <title>Task Manager | Home</title>
+<link href="static/images/favico.ico" rel="shortcut icon">
 <link href="static/css/bootstrap.min.css" rel="stylesheet">
 <link href="static/css/style.css" rel="stylesheet">
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css'>
-<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch'
+	href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
 <script src="static/js/jquery.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/datepicker.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js'></script>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js'></script>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js'></script>
 
 </head>
 <style>
 #image_div {
 	background-image: url(static/images/hero_background.png);
-	width: 1368px;
+	width: 1359px;
 	height: 450px;
 	margin-left: -115px;
 	margin-top: -110px;
@@ -81,6 +86,32 @@
 	height: 50px;
 	width: 100px
 }
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+	padding-top: 60px;
+	padding-left: 6px;
+	background-color: #F8F9F9;
+}
+
+.card {
+	-webkit-box-shadow: 10px 9px 27px -10px rgba(0,0,0,0.50);
+	-moz-box-shadow: 10px 9px 27px -10px rgba(0,0,0,0.50);
+	box-shadow: 10px 9px 27px -10px rgba(0,0,0,0.50);
+	transition: 0.3s;
+	width: 350px;
+	height: 200px;
+	background-color: white;
+}
+
+.card:hover {
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+#trackingDetails{
+	
+}
 </style>
 <body>
 
@@ -122,7 +153,39 @@
 			</form>
 		</div>
 
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-block">
+						<p class="card-text">Some quick example text to build on the
+							card title .</p>
+					</div>
+				</div>
+			</div>
 
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-block">
+						<p class="card-text">Some quick example text to build on the
+							card title .</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-block">
+						<p class="card-text">Some quick example text to build on the
+							card title .</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container" id="trackingDetails">
+			<div class="jumbotron text-center">
+			</div>
+		</div>
 
 
 	</div>
