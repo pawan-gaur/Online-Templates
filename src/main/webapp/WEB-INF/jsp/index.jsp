@@ -109,8 +109,11 @@
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
 }
 
-#trackingDetails{
-	
+.container-jumbotron{
+	margin-right: -15px;
+	margin-left: -15px;
+	padding-top: 50px;
+	padding-left: 6px;
 }
 </style>
 <body>
@@ -182,7 +185,7 @@
 			</div>
 		</div>
 		
-		<div class="container" id="trackingDetails">
+		<div class="container-jumbotron">
 			<div class="jumbotron text-center">
 			</div>
 		</div>
