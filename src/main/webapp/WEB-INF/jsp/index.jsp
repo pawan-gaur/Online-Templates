@@ -115,6 +115,16 @@
 	padding-top: 50px;
 	padding-left: 6px;
 }
+
+.booking-img{
+	background-image: url(static/images/booking-img.png);
+	height: 261px;
+	width: 424px;
+}
+
+.booking-text{
+	
+}
 </style>
 <body>
 
@@ -187,6 +197,11 @@
 		
 		<div class="container-jumbotron">
 			<div class="jumbotron text-center">
+				<div class="booking-img">
+					<div class="booking-text">
+						
+					</div>
+				</div>
 			</div>
 		</div>
 
