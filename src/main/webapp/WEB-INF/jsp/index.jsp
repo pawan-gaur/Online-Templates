@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
 <title>Task Manager | Home</title>
-<link href="static/images/favico.ico" rel="shortcut icon">
+<link href="static/images/photo.jpg" rel="shortcut icon">
 <link href="static/css/bootstrap.min.css" rel="stylesheet">
 <link href="static/css/style.css" rel="stylesheet">
 <link rel='stylesheet prefetch'
@@ -145,19 +145,20 @@
 					<input type="text" class="form-control" id="inlineFormInputGroup"
 						placeholder="To">
 				</div>
-
+				
 				<div class='input-group date' id='datetimepicker1'>
 					<span class="input-group-addon"><span
 						class="glyphicon glyphicon-calendar"></span></span> <input type="text"
 						class="form-control" id="inlineFormInputGroup"
 						placeholder="ONWARDDATE">
+					<!-- <input type= date> -->
 				</div>
 
 				<div class='input-group date' id='datetimepicker1'>
 					<span class="input-group-addon"><span
 						class="glyphicon glyphicon-calendar"></span></span> <input type="text"
 						class="form-control" id="inlineFormInputGroup"
-						placeholder="RETURNDATE">
+						placeholder="RETURNDATE (Optional)">
 				</div>
 
 				<div>
