@@ -16,5 +16,20 @@ public class MenuController {
 	public String index(){
 		return "index";
 	}
+	
+	@RequestMapping(value="/hotels", method=RequestMethod.GET)
+	public String hotels(){
+		return "hotels";
+	}
+	
+	@RequestMapping(value="/bushire", method=RequestMethod.GET)
+	public String bushire(){
+		return "bushire";
+	}
+	
+	@RequestMapping(value="/agentRegistration", method=RequestMethod.GET)
+	public String agent(){
+		return "agent";
+	}
 
 }
