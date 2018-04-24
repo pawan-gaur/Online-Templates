@@ -333,21 +333,21 @@
 				data-wow-delay=".5s">
 				<h3>Bus Operators</h3>
 				<ul>
-					<li><a href="bus.html">New York Charter </a></li>
-					<li><a href="bus.html">Washington Charter</a></li>
-					<li><a href="bus.html">Los Angeles Charter</a></li>
-					<li><a href="bus.html">Chicago Charter</a></li>
-					<li><a href="bus.html">Orlando Charter</a></li>
-					<li><a href="bus.html">New Orleans Charter</a></li>
-					<li><a href="bus.html">Houston Charter</a></li>
-					<li><a href="bus.html">Nashville Charter</a></li>
-					<li><a href="bus.html">Charlotte Charter</a></li>
-					<li><a href="bus.html">Toronto Charter</a></li>
-					<li><a href="bus.html">Washington Charter</a></li>
-					<li><a href="bus.html">Los Angeles Charter</a></li>
-					<li><a href="bus.html">Chicago Charter</a></li>
-					<li><a href="bus.html">Orlando Charter</a></li>
-					<li><a href="bus.html">New Orleans Charter</a></li>
+					<li><a href="bus.html">APSRTC</a></li>
+					<li><a href="bus.html">HRTC</a></li>
+					<li><a href="bus.html">MSRTC</a></li>
+					<li><a href="bus.html">PRTC</a></li>
+					<li><a href="bus.html">UPSRTC</a></li>
+					<li><a href="bus.html">ASTC</a></li>
+					<li><a href="bus.html">JKSRTC</a></li>
+					<li><a href="bus.html">OSRTC</a></li>
+					<li><a href="bus.html">RSRTC</a></li>
+					<li><a href="bus.html">UTC</a></li>
+					<li><a href="bus.html">GSRTC</a></li>
+					<li><a href="bus.html">KTCL</a></li>
+					<li><a href="bus.html">PEPSU</a></li>
+					<li><a href="bus.html">SBSTC</a></li>
+					<li><a href="bus.html">WBTC</a></li>
 					<div class="clearfix"></div>
 				</ul>
 			</div>
@@ -355,21 +355,21 @@
 				data-wow-delay=".5s">
 				<h3>Bus Routes</h3>
 				<ul>
-					<li><a href="travels.html">Alabama-California</a></li>
-					<li><a href="travels.html">Alaska-Colorado</a></li>
-					<li><a href="travels.html">Arizona-Delaware</a></li>
-					<li><a href="travels.html">Arkansas-Florida</a></li>
-					<li><a href="travels.html">Kansas-Georgia</a></li>
-					<li><a href="travels.html">Iowa-Hawaii</a></li>
-					<li><a href="travels.html">Indiana-Illinois</a></li>
-					<li><a href="travels.html">Illinois-Florida</a></li>
-					<li><a href="travels.html">Idaho-Indiana</a></li>
-					<li><a href="travels.html">Hawaii-Iowa</a></li>
-					<li><a href="travels.html">Georgia-Kansas</a></li>
-					<li><a href="travels.html">Florida-Arkansas</a></li>
-					<li><a href="travels.html">Delaware-Arizona</a></li>
-					<li><a href="travels.html">Colorado-Alaska</a></li>
-					<li><a href="travels.html">California-Alabama</a></li>
+					<li><a href="travels.html">Delhi To Manali Bus</a></li>
+					<li><a href="travels.html">Delhi To Shimla Bus</a></li>
+					<li><a href="travels.html">Mumbai To Goa Bus</a></li>
+					<li><a href="travels.html">Pune To Shirdi Bus</a></li>
+					<li><a href="travels.html">Pune To Goa Bus</a></li>
+					<li><a href="travels.html">Mumbai To Pune Bus</a></li>
+					<li><a href="travels.html">Delhi To Dehradun Bus</a></li>
+					<li><a href="travels.html">Pune To Mumbai Bus</a></li>
+					<li><a href="travels.html">Delhi To Jaipur Bus</a></li>
+					<li><a href="travels.html">Delhi To Agra Bus</a></li>
+					<li><a href="travels.html">Delhi To Chandigarh Bus</a></li>
+					<li><a href="travels.html">Delhi To Dharamshala Bus</a></li>
+					<li><a href="travels.html">Delhi To Lucknow Bus</a></li>
+					<li><a href="travels.html">Delhi To Rishikesh Bus</a></li>
+					<li><a href="travels.html">Delhi To Jammu Bus</a></li>
 					<div class="clearfix"></div>
 				</ul>
 			</div>
