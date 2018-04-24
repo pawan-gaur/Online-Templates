@@ -198,7 +198,7 @@
 					<a href="offers.html"><i class="fa fa-inr"></i></a>
 				</div>
 				<div class="rup-rgt">
-					<h3>UP TO USD. 50 OFF</h3>
+					<h3>UP TO Rs. 50 OFF</h3>
 					<h4>
 						<a href="offers.html">TRAVEL SMART</a>
 					</h4>
@@ -230,7 +230,7 @@
 					<a href="offers.html"><i class="fa fa-mobile"></i></a>
 				</div>
 				<div class="rup-rgt">
-					<h3>FLAT USD. 50 OFF</h3>
+					<h3>FLAT Rs. 50 OFF</h3>
 					<h4>
 						<a href="offers.html">BUS APP OFFER</a>
 					</h4>
