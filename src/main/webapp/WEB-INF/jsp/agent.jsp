@@ -17,7 +17,7 @@
 			<div class="ag-bt">
 				<a class="regist" href="#">Register Online &amp; Start Now</a>
 			</div>
-			<p id="msg">Submit details we will call you back</p>
+			<p id="msg">Please fill below form. We will call you back</p>
 			<form>
 				<input type="text" id="name" placeholder="Name">
 				<input type="text" id="email"  placeholder="Email">
