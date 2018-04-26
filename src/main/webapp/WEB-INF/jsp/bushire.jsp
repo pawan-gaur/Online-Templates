@@ -9,18 +9,21 @@
 	<div class="col-md-7 bann-info wow fadeInRight animated"
 		data-wow-delay=".5s">
 		<h2>Hire Bus at Minimal Advance Booking Fee</h2>
-		<p id="msg">Please fill below form to Book full Bus</p><br/>
+		<p id="msg">Please fill below form to Book full Bus</p>
+		<br />
 		<form>
 			<div class="ban-top">
 				<div class="bnr-left">
-					<label class="inputLabel">From</label> <input class="city" id="source"
-						type="text" value="Enter a city" onfocus="this.value = '';"
+					<label class="inputLabel">From</label> <input class="city"
+						id="source" type="text" value="Enter a city"
+						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter a city';}"
 						required=>
 				</div>
 				<div class="bnr-left">
-					<label class="inputLabel">To</label> <input class="city" id="destination"
-						type="text" value="Enter a city" onfocus="this.value = '';"
+					<label class="inputLabel">To</label> <input class="city"
+						id="destination" type="text" value="Enter a city"
+						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter a city';}"
 						required=>
 				</div>
@@ -55,8 +58,9 @@
 
 			<div class="ban-bottom">
 				<div class="bnr-left">
-					<label class="inputLabel">Total Person</label> <input class="city" id="totalPerson"
-						type="text" value="Enter No. of Person" onfocus="this.value = '';"
+					<label class="inputLabel">Total Person</label> <input class="city"
+						id="total_person" type="text" value="Enter No. of Person"
+						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter No. of Person';}"
 						required=>
 				</div>
@@ -64,7 +68,9 @@
 			</div>
 
 			<div class="sear">
-				<input type="button" value ="Hire Bus" class="seabtn" onclick="saveBusHire()">
+				<input class="seabtn"
+					style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
+					type="button" value="Hire Bus" onclick="saveBusHire()">
 			</div>
 		</form>
 	</div>
@@ -72,27 +78,28 @@
 </div>
 
 <script>
-function saveBusHire(){
-	var bushire = {};
-	bushire.source = $("#source").val();
-	bushire.destination = $("#destination").val();
-	bushire.doj = $("#doj").val();
-	bushire.dor = $("#dor").val();
-	bushire.totalPerson = $("#totalPerson").val();
-	$.ajax({
-		url:"saveBusHire",
-		method:"POST",
-		data:JSON.stringify(bushire),
-		contentType: "application/JSON",
-		success:function(data){
-			if(data == "Success"){
-				$("#msg").html("We have received your Booking request, Our representative will call you soon")
-			}
-		}
-	});
-}
-
-
+	function saveBusHire() {
+		var bushire = {};
+		bushire.source = $("#source").val();
+		bushire.destination = $("#destination").val();
+		bushire.doj = $("#doj").val();
+		bushire.dor = $("#dor").val();
+		bushire.total_person = $("#total_person").val();
+		$
+				.ajax({
+					url : "saveBusHire",
+					method : "POST",
+					data : JSON.stringify(bushire),
+					contentType : "application/JSON",
+					success : function(data) {
+						if (data == "Success") {
+							$("#msg")
+									.html(
+											"We have received your Booking request, Our representative will call you soon")
+						}
+					}
+				});
+	}
 </script>
 
 <%@ include file="common/footer.jsp"%>

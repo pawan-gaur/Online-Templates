@@ -18,19 +18,19 @@ public class BusHire implements Serializable {
 	private String destination;
 	private String doj;
 	private String dor;
-	private String totalPerson;
+	private String total_person;
 
 	public BusHire() {
 
 	}
 
-	public BusHire(String source, String destination, String doj, String dor, String totalPerson) {
+	public BusHire(String source, String destination, String doj, String dor, String total_person) {
 		super();
 		this.source = source;
 		this.destination = destination;
 		this.doj = doj;
 		this.dor = dor;
-		this.totalPerson = totalPerson;
+		this.total_person = total_person;
 	}
 
 	public int getId() {
@@ -73,19 +73,18 @@ public class BusHire implements Serializable {
 		this.dor = dor;
 	}
 	
-	@Column(name="totalPerson", unique=true, nullable=false)
-	public String getTotalPerson() {
-		return totalPerson;
+	public String getTotal_person() {
+		return total_person;
 	}
 
-	public void setTotalPerson(String totalPerson) {
-		this.totalPerson = totalPerson;
+	public void setTotal_person(String total_person) {
+		this.total_person = total_person;
 	}
 
 	@Override
 	public String toString() {
 		return "BusHire [id=" + id + ", source=" + source + ", destination=" + destination + ", doj=" + doj + ", dor=" + dor
-				+ ", totalPerson=" + totalPerson + "]";
+				+ ", total_person=" + total_person + "]";
 	}
 	
 	
