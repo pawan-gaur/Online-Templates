@@ -1,11 +1,22 @@
 package com.busbooking.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.busbooking.Service.AgentRegistrationService;
+import com.busbooking.model.AgentRegistration;
 
 @Controller
 public class MenuController {
+	
+	@Autowired
+	private AgentRegistrationService agentRegistrationService;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
@@ -30,6 +41,13 @@ public class MenuController {
 	@RequestMapping(value="/agentRegistration", method=RequestMethod.GET)
 	public String agent(){
 		return "agent";
+	}
+	
+	@RequestMapping(value="/saveAgentDetails", method=RequestMethod.POST)
+	@ResponseBody
+	public ResponseEntity<Object> saveAgent(@RequestBody AgentRegistration agentRegistration){
+		agentRegistrationService.save(agentRegistration);
+		return new ResponseEntity<>("Success",HttpStatus.OK);
 	}
 
 }

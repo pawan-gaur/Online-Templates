@@ -17,22 +17,23 @@
 			<div class="ag-bt">
 				<a class="regist" href="#">Register Online &amp; Start Now</a>
 			</div>
-			<p>Submit details we will call you back</p>
+			<p id="msg">Submit details we will call you back</p>
 			<form>
-				<input type="text" placeholder="Name"> <input type="text"
-					placeholder="Email"> <input type="text"
-					placeholder="Organization"> <input type="text"
-					placeholder="Phone"> <input type="text" placeholder="City">
-				<select name="" id="" class="grayTextNormal">
+				<input type="text" id="name" placeholder="Name">
+				<input type="text" id="email"  placeholder="Email">
+				<input type="text" id="organization" placeholder="Organization">
+				<input type="text" id="phone" placeholder="Phone">
+				<input type="text" id="city" placeholder="City">
+				<select name="state" id="state" class="grayTextNormal">
 					<option value="-- Select State --">-- Select State --</option>
-					<option value="Los Angeles Charter">Delhi</option>
-					<option value="New Orleans">Rajasthan</option>
-					<option value="Charlotte">Himachal Pradesh</option>
-					<option value="Washington">Uttar Pradesh</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Himachal Pradesh">Himachal Pradesh</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
 				</select>
-				<textarea placeholder="Message"></textarea>
+				<textarea id ="message" placeholder="Message"></textarea>
 				<div class="sub">
-					<input type="submit" value="Submit">
+					<input type="button"  value="Submit" onclick="saveAgentDetails()">
 				</div>
 			</form>
 		</div>
@@ -57,3 +58,27 @@
 <!--- /agent ---->
 
 <%@ include file="common/footer.jsp"%>
+
+<script>
+function saveAgentDetails(){
+	var agent = {};
+	agent.name = $("#name").val();
+	agent.email=$("#email").val();
+	agent.organization=$("#organization").val();
+	agent.phone=$("#phone").val();
+	agent.city=$("#city").val();
+	agent.state=$("#state").val();
+	agent.message=$("#message").val();
+	$.ajax({
+		url: "saveAgentDetails",
+		method: "POST",
+		data: JSON.stringify(agent),
+		contentType: "application/json",
+		success: function(data){
+			if(data == "Success"){
+				$("#msg").html("We received you details, Our representative will contact you soon...")
+			}
+		}
+	});
+}
+</script>
