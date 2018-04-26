@@ -140,7 +140,7 @@
 				<a href="#"><i class="fa fa-ticket"></i></a>
 			</div>
 			<div class="rou-rgt">
-				<h3>660,000+</h3>
+				<h3>60,000+</h3>
 				<p>TICKETS SOLD</p>
 			</div>
 			<div class="clearfix"></div>

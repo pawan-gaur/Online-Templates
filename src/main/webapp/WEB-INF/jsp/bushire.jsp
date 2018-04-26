@@ -85,20 +85,17 @@
 		bushire.doj = $("#doj").val();
 		bushire.dor = $("#dor").val();
 		bushire.total_person = $("#total_person").val();
-		$
-				.ajax({
-					url : "saveBusHire",
-					method : "POST",
-					data : JSON.stringify(bushire),
-					contentType : "application/JSON",
-					success : function(data) {
-						if (data == "Success") {
-							$("#msg")
-									.html(
-											"We have received your Booking request, Our representative will call you soon")
-						}
-					}
-				});
+		$.ajax({
+			url : "saveBusHire",
+			method : "POST",
+			data : JSON.stringify(bushire),
+			contentType : "application/JSON",
+			success : function(data) {
+				if (data == "Success") {
+					$("#msg").html("We have received your Booking request, Our representative will call you soon")
+				}
+			}
+		});
 	}
 </script>
 

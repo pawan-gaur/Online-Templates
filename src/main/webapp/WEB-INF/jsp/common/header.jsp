@@ -65,7 +65,8 @@
 				<a href="/index" class="buses active">BUSES</a>
 				<a href="/hotels">HOTELS</a>
 				<a href="/bushire">BUS HIRE</a>
-				<a href="#">THINK</a>
+				<a href="/agentRegistration">Agent</a>
+				<a href="#" data-toggle="modal" data-target="#myModal3">Write Us </a>
 				
 			</div>
 			<div class="lock fadeInDown" data-wow-delay=".5s">
@@ -81,47 +82,3 @@
 		</div>
 	</div>
 	<!--- /header ---->
-	<!--- footer-btm ---->
-	<div class="footer-btm wow fadeInLeft" data-wow-delay=".5s">
-		<div class="container">
-			<div class="navigation">
-				<nav class="navbar navbar-default">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"></span> <span class="icon-bar"></span> <span
-								class="icon-bar"></span>
-						</button>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse nav-wil"
-						id="bs-example-navbar-collapse-1">
-						<nav class="cl-effect-1">
-							<ul class="nav navbar-nav">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Apps</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Travels</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="/agentRegistration">Agent Registration</a></li>
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li>Need Help?<a href="#" data-toggle="modal"
-									data-target="#myModal3"> / Write Us </a>
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-						</nav>
-					</div>
-					<!-- /.navbar-collapse -->
-				</nav>
-			</div>
-
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<!--- /footer-btm ---->
