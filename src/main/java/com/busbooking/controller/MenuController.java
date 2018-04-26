@@ -10,13 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.busbooking.Service.AgentRegistrationService;
+import com.busbooking.Service.BusHireService;
 import com.busbooking.model.AgentRegistration;
+import com.busbooking.model.BusHire;
 
 @Controller
 public class MenuController {
 	
 	@Autowired
 	private AgentRegistrationService agentRegistrationService;
+	
+	@Autowired
+	private BusHireService busHireService;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
@@ -36,6 +41,13 @@ public class MenuController {
 	@RequestMapping(value="/bushire", method=RequestMethod.GET)
 	public String bushire(){
 		return "bushire";
+	}
+	
+	@RequestMapping(value="/saveBusHire", method=RequestMethod.POST)
+	@ResponseBody
+	public ResponseEntity<Object> saveBusHire(@RequestBody BusHire busHire){
+		busHireService.save(busHire);
+		return new ResponseEntity<Object>("Success",HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/agentRegistration", method=RequestMethod.GET)

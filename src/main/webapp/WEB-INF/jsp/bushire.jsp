@@ -9,65 +9,90 @@
 	<div class="col-md-7 bann-info wow fadeInRight animated"
 		data-wow-delay=".5s">
 		<h2>Hire Bus at Minimal Advance Booking Fee</h2>
-		<div class="ban-top">
-			<div class="bnr-left">
-				<label class="inputLabel">From</label> <input class="city"
-					type="text" value="Enter a city" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Enter a city';}"
-					required=>
+		<p id="msg">Please fill below form to Book full Bus</p><br/>
+		<form>
+			<div class="ban-top">
+				<div class="bnr-left">
+					<label class="inputLabel">From</label> <input class="city" id="source"
+						type="text" value="Enter a city" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						required=>
+				</div>
+				<div class="bnr-left">
+					<label class="inputLabel">To</label> <input class="city" id="destination"
+						type="text" value="Enter a city" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						required=>
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="bnr-left">
-				<label class="inputLabel">To</label> <input class="city" type="text"
-					value="Enter a city" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Enter a city';}"
-					required=>
+			<div class="ban-bottom">
+				<div class="bnr-right">
+					<label class="inputLabel">Date of Journey</label> <input
+						class="date" id="doj" type="text" value="dd-mm-yyyy"
+						onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
+						required=>
+				</div>
+				<div class="bnr-right">
+					<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
+					<input class="date" id="dor" type="text" value="dd-mm-yyyy"
+						onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
+						required=>
+				</div>
+				<div class="clearfix"></div>
+				<!---start-date-piker---->
+				<link rel="stylesheet" href="static/css/jquery-ui.css" />
+				<script src="static/js/jquery-ui.js"></script>
+				<script>
+					$(function() {
+						$("#doj,#dor").datepicker();
+					});
+				</script>
+				<!---/End-date-piker---->
 			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="ban-bottom">
-			<div class="bnr-right">
-				<label class="inputLabel">Date of Journey</label> <input
-					class="date" id="datepicker" type="text" value="dd-mm-yyyy"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-					required=>
+
+			<div class="ban-bottom">
+				<div class="bnr-left">
+					<label class="inputLabel">Total Person</label> <input class="city" id="totalPerson"
+						type="text" value="Enter No. of Person" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Enter No. of Person';}"
+						required=>
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="bnr-right">
-				<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
-				<input class="date" id="datepicker1" type="text" value="dd-mm-yyyy"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-					required=>
+
+			<div class="sear">
+				<input type="button" value ="Hire Bus" class="seabtn" onclick="saveBusHire()">
 			</div>
-			<div class="clearfix"></div>
-			<!---start-date-piker---->
-			<link rel="stylesheet" href="static/css/jquery-ui.css" />
-			<script src="static/js/jquery-ui.js"></script>
-			<script>
-				$(function() {
-					$("#datepicker,#datepicker1").datepicker();
-				});
-			</script>
-			<!---/End-date-piker---->
-		</div>
-		
-		<div class="ban-bottom">
-			<div class="bnr-left">
-				<label class="inputLabel">Total Person</label> <input class="city"
-					type="text" value="Enter No. of Person" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Enter No. of Person';}"
-					required=>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		
-		<div class="sear">
-			<form action="bus.html">
-				<button class="seabtn">Hire Bus</button>
-			</form>
-		</div>
+		</form>
 	</div>
 	<div class="clearfix"></div>
 </div>
+
+<script>
+function saveBusHire(){
+	var bushire = {};
+	bushire.source = $("#source").val();
+	bushire.destination = $("#destination").val();
+	bushire.doj = $("#doj").val();
+	bushire.dor = $("#dor").val();
+	bushire.totalPerson = $("#totalPerson").val();
+	$.ajax({
+		url:"saveBusHire",
+		method:"POST",
+		data:JSON.stringify(bushire),
+		contentType: "application/JSON",
+		success:function(data){
+			if(data == "Success"){
+				$("#msg").html("We have received your Booking request, Our representative will call you soon")
+			}
+		}
+	});
+}
+
+
+</script>
 
 <%@ include file="common/footer.jsp"%>
