@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.busbooking.Service.AgentRegistrationService;
 import com.busbooking.Service.BusHireService;
+import com.busbooking.Service.SignUpService;
 import com.busbooking.Service.WriteUsService;
 import com.busbooking.model.AgentRegistration;
 import com.busbooking.model.BusHire;
+import com.busbooking.model.SignUp;
 import com.busbooking.model.WriteUs;
 
 @Controller
@@ -27,6 +29,9 @@ public class MenuController {
 	
 	@Autowired
 	private WriteUsService writeUsService;
+	
+	@Autowired
+	private SignUpService signUpService;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
@@ -71,6 +76,13 @@ public class MenuController {
 	public ResponseEntity<Object> saveWriteUs(@RequestBody WriteUs writeUs){
 		writeUsService.save(writeUs);
 		return new ResponseEntity<>("Success",HttpStatus.OK);
+	}
+	
+	
+	@RequestMapping(value="/saveSignup", method=RequestMethod.POST)
+	public String saveSignUp(@RequestBody SignUp signUp) {
+		signUpService.save(signUp);
+		return "index";
 	}
 
 }
