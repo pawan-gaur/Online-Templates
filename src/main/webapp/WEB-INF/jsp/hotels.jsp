@@ -73,7 +73,7 @@
 				<div class="view1 view1-sixth">
 					<img src="static/images/h5.jpg" class="img-responsive" alt="">
 					<div class="mask">
-						<h2>Residence Inn Deptford</h2>
+						<h2>Shreyas</h2>
 					</div>
 				</div>
 			</a>
@@ -84,7 +84,7 @@
 				<div class="view1 view1-sixth">
 					<img src="static/images/h1.jpg" class="img-responsive" alt="">
 					<div class="mask">
-						<h2>Residence Inn Deptford</h2>
+						<h2>Leela hotel - Delhi</h2>
 					</div>
 				</div>
 			</a>
@@ -97,7 +97,7 @@
 					<div class="view1 view1-sixth">
 						<img src="static/images/h3.jpg" class="img-responsive" alt="">
 						<div class="mask">
-							<h2>Residence Inn Deptford</h2>
+							<h2>Hotel-Claridges - New-Delhi</h2>
 						</div>
 					</div>
 				</a>
@@ -108,7 +108,7 @@
 					<div class="view1 view1-sixth">
 						<img src="static/images/h2.jpg" class="img-responsive" alt="">
 						<div class="mask">
-							<h2>Residence Inn Deptford</h2>
+							<h2>The Oberoi Udaivilas - Udaipur</h2>
 						</div>
 					</div>
 				</a>
@@ -119,7 +119,7 @@
 					<div class="view1 view1-sixth">
 						<img src="static/images/h4.jpg" class="img-responsive" alt="">
 						<div class="mask">
-							<h2>Residence Inn Deptford</h2>
+							<h2>Oberoi Amarvilas - Agra</h2>
 						</div>
 					</div>
 				</a>
@@ -138,7 +138,7 @@
 			<a href="details.html"><div class="view1 view1-sixth">
 					<img src="static/images/c4.jpg" class="img-responsive" alt="">
 					<div class="mask">
-						<h2>Paterson Great Falls</h2>
+						<h2>Hawa Mahal - Jaipur</h2>
 					</div>
 				</div> </a>
 		</div>
@@ -148,7 +148,7 @@
 				<div class="view1 view1-sixth">
 					<img src="static/images/c5.jpg" class="img-responsive" alt="">
 					<div class="mask">
-						<h2>Paterson Great Falls</h2>
+						<h2>Qutub Minar - Delhi</h2>
 					</div>
 				</div>
 			</a>
@@ -159,7 +159,7 @@
 				<div class="view1 view1-sixth">
 					<img src="static/images/c3.jpg" class="img-responsive" alt="">
 					<div class="mask">
-						<h2>Paterson Great Falls</h2>
+						<h2>Golden Temple - Amritsar</h2>
 					</div>
 				</div>
 			</a>
@@ -172,7 +172,7 @@
 					<div class="view1 view1-sixth">
 						<img src="static/images/c1.jpg" class="img-responsive" alt="">
 						<div class="mask">
-							<h2>Paterson Great Falls</h2>
+							<h2>Akshardham - Delhi</h2>
 						</div>
 					</div>
 				</a>
@@ -184,7 +184,7 @@
 					<div class="view1 view1-sixth">
 						<img src="static/images/c2.jpg" class="img-responsive" alt="">
 						<div class="mask">
-							<h2>Paterson Great Falls</h2>
+							<h2>Fort - Jaipur</h2>
 						</div>
 					</div>
 				</a>
@@ -199,18 +199,18 @@
 	<div class="container">
 		<div class="col-md-4 hotes-left wow fadeInRight animated"
 			data-wow-delay=".5s">
-			<h3>8,000 +</h3>
+			<h3>1,1s00 +</h3>
 			<p>Cities with Hotels</p>
 		</div>
 		<div class="col-md-4 hotes-left wow fadeInUp animated"
 			data-wow-delay=".5s">
-			<h3>19,000 +</h3>
+			<h3>12,000 +</h3>
 			<p>Happy Customers</p>
 		</div>
 		<div class="col-md-4 hotes-left wow fadeInRight animated"
 			data-wow-delay=".5s">
-			<h3>19,000+</h3>
-			<p>Hotel Across World</p>
+			<h3>2,000+</h3>
+			<p>Hotel Across India</p>
 		</div>
 		<div class="clearfix"></div>
 	</div>
