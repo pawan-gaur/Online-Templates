@@ -66,6 +66,7 @@
 				<a href="/hotels">HOTELS</a>
 				<a href="/bushire">BUS HIRE</a>
 				<a href="/agentRegistration">Agent</a>
+				<a href="/ticketCancellation">Ticket Cancellation</a>
 				<a href="#" data-toggle="modal" data-target="#myModal3">Write Us </a>
 				
 			</div>

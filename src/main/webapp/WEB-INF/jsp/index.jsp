@@ -1,4 +1,4 @@
-<%@ include file = "common/header.jsp" %>
+<%@ include file="common/header.jsp"%>
 
 
 <!--- banner ---->
@@ -18,58 +18,58 @@
 	<div class="col-md-7 bann-info wow fadeInRight animated"
 		data-wow-delay=".5s">
 		<h2>Online Tickets with Zero Booking Fees</h2>
-		<div class="ban-top">
-			<div class="bnr-left">
-				<label class="inputLabel">From</label> <input class="city"
-					type="text" value="Enter a city" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Enter a city';}"
-					required=>
+		<form>
+			<div class="ban-top">
+				<div class="bnr-left">
+					<label class="inputLabel">From</label> <input class="city"
+						type="text" value="Enter a city" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						required=>
+				</div>
+				<div class="bnr-left">
+					<label class="inputLabel">To</label> <input class="city"
+						type="text" value="Enter a city" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						required=>
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="bnr-left">
-				<label class="inputLabel">To</label> <input class="city" type="text"
-					value="Enter a city" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Enter a city';}"
-					required=>
+			<div class="ban-bottom">
+				<div class="bnr-right">
+					<label class="inputLabel">Date of Journey</label> <input
+						class="date" id="datepicker" type="text" value="dd-mm-yyyy"
+						onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
+						required=>
+				</div>
+				<div class="bnr-right">
+					<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
+					<input class="date" id="datepicker1" type="text" value="dd-mm-yyyy"
+						onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
+						required=>
+				</div>
+				<div class="clearfix"></div>
+				<!---start-date-piker---->
+				<link rel="stylesheet" href="static/css/jquery-ui.css" />
+				<script src="static/js/jquery-ui.js"></script>
+				<script>
+					$(function() {
+						$("#datepicker,#datepicker1").datepicker();
+					});
+				</script>
+				<!---/End-date-piker---->
 			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="ban-bottom">
-			<div class="bnr-right">
-				<label class="inputLabel">Date of Journey</label> <input
-					class="date" id="datepicker" type="text" value="dd-mm-yyyy"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-					required=>
-			</div>
-			<div class="bnr-right">
-				<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
-				<input class="date" id="datepicker1" type="text" value="dd-mm-yyyy"
-					onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-					required=>
-			</div>
-			<div class="clearfix"></div>
-			<!---start-date-piker---->
-			<link rel="stylesheet" href="static/css/jquery-ui.css" />
-			<script src="static/js/jquery-ui.js"></script>
-			<script>
-				$(function() {
-					$("#datepicker,#datepicker1").datepicker();
-				});
-			</script>
-			<!---/End-date-piker---->
-		</div>
-		<div class="sear">
-			<form action="bus.html">
+			<div class="sear">
 				<button class="seabtn">Search Buses</button>
-			</form>
-		</div>
+			</div>
+		</form>
 	</div>
 	<div class="clearfix"></div>
 </div>
 <!--- /banner ---->
 <!--- rupes ---->
-<%@ include file = "common/offer.jsp" %>
+<%@ include file="common/offer.jsp"%>
 <!--- /rupes ---->
 <hr>
 <!---holiday---->
@@ -150,4 +150,4 @@
 </div>
 <!--- /routes ---->
 
-<%@ include file = "common/footer.jsp" %>
+<%@ include file="common/footer.jsp"%>

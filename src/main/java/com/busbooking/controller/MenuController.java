@@ -53,6 +53,11 @@ public class MenuController {
 	public String bushire() {
 		return "bushire";
 	}
+	
+	@RequestMapping(value = "/busSearch", method = RequestMethod.GET)
+	public String busSearch() {
+		return "busSearch";
+	}	
 
 	@RequestMapping(value = "/saveBusHire", method = RequestMethod.POST)
 	@ResponseBody
@@ -71,6 +76,11 @@ public class MenuController {
 	public ResponseEntity<Object> saveAgent(@RequestBody AgentRegistration agentRegistration) {
 		agentRegistrationService.save(agentRegistration);
 		return new ResponseEntity<>("Success", HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/ticketCancellation", method = RequestMethod.GET)
+	public String ticketCancellation() {
+		return "ticketCancellation";
 	}
 
 	@RequestMapping(value = "/saveWriteUs", method = RequestMethod.POST)

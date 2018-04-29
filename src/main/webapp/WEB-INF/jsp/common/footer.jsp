@@ -62,10 +62,8 @@
 				<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
 			</ul>
 		</div>
-		<p class="wow zoomIn animated animated" data-wow-delay=".5s"
-			style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">
-			© 2018 Bus Booking . All Rights Reserved | Design by <a
-				href="http://pgaur.com/" target="_blank">PGaur</a>
+		<p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">
+			© 2018 Bus Booking . All Rights Reserved | Design by <a href="http://pgaur.com/" target="_blank">PGaur</a>
 		</p>
 	</div>
 </div>
@@ -87,12 +85,9 @@
 						<div class="login">
 							<div class="login-left">
 								<ul>
-									<li><a class="fb" href="#"><i></i>Sign in with
-											Facebook</a></li>
-									<li><a class="goog" href="#"><i></i>Sign in with
-											Google</a></li>
-									<li><a class="linkin" href="#"><i></i>Sign in with
-											Linkedin</a></li>
+									<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
+									<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
+									<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
 								</ul>
 							</div>
 							<div class="login-right">
@@ -136,8 +131,7 @@
 							<ul>
 								<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
 								<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
-								<li><a class="linkin" href="#"><i></i>Sign in with
-										Linkedin</a></li>
+								<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
 							</ul>
 						</div>
 						<div class="login-right">
