@@ -6,7 +6,8 @@
 <!--- bus-tp ---->
 <div class="bus-tp">
 	<div class="container">
-		<p>Fare starts from : Rs. 499 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<p>Fare starts from : Rs. 499
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 		<p>DoJ : ${busSearch.doj}</p>
 		<p>&nbsp; | DoR : ${busSearch.dor}</p>
 		<h2>Buses : ${busSearch.source} to ${busSearch.destination}</h2>
@@ -37,6 +38,7 @@
 
 			<ul class="first">
 				<li class="trav">
+					<input type="hidden" value="${busDealer.id}" id="busId">
 					<div class="bus-ic">
 						<img src="static/images/bus.png" class="img-responsive" alt="">
 					</div>
@@ -80,132 +82,102 @@
 				<li class="fare">
 					<div class="bus-txt4">
 						<h5>Rs. ${busDealer.fee}</h5>
-							<a href="#img1" class="view">Book Ticket</a>
-							<div class="lightbox" id="img1">
-								<div class="box">
-									<a class="close" href="#">X</a>
-									<div class="set-left">
-										<ul class="set">
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-4.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-4.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-5.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-5.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-2.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-2.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="set-1">
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="set">
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-3.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-3.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-4.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-4.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-5.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-3.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-3.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-3.png"
-													class="img-responsive" alt=""></a></li>
-											<li><a href="#"><img src="static/images/seat-1.png"
-													class="img-responsive" alt=""></a></li>
-											<div class="clearfix"></div>
-										</ul>
-									</div>
-									<div class="set-right">
-										<ul class="ste1">
-											<li><img src="static/images/seat-2.png"
-												class="img-responsive" alt=""></li>
-											<li><p class="aval">Available Seat</p></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="ste1">
-											<li><img src="static/images/seat-3.png"
-												class="img-responsive" alt=""></li>
-											<li><p class="aval">Reserved for Ladies</p></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="ste1">
-											<li><img src="static/images/seat-4.png"
-												class="img-responsive" alt=""></li>
-											<li><p class="aval">Selected Seat</p></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="ste1">
-											<li><img src="static/images/seat-5.png"
-												class="img-responsive" alt=""></li>
-											<li><p class="aval">Booked by Gents</p></li>
-											<div class="clearfix"></div>
-										</ul>
-										<ul class="ste1">
-											<li><img src="static/images/seat-3.png"
-												class="img-responsive" alt=""></li>
-											<li><p class="aval">Booked by Ladies</p></li>
-											<div class="clearfix"></div>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
+						<a href="#" class="view" data-toggle="modal" data-busid = "${busDealer.id}"
+							data-target="#myModal5" onclick="setValue(this)">Book Ticket</a>
+
 					</div>
 				</li>
 				<div class="clearfix"></div>
 			</ul>
 		</c:forEach>
+		<input id="selectedBus" type="hidden"  value="">
 		<!--- /ul-first  ---->
 	</div>
 </div>
 <!--- /bus-midd ---->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<section>
+				<div class="modal-body modal-spa">
+					<div class="writ">
+						<h4>Enter Below Details to Confirm Your Ticket</h4>
+						<p id="msg"></p>
+						<form>
+							<ul>
+								<li class="na-me"><input class="name" type="text" id="name"
+									value="Name" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Name';}"
+									required=""></li>
+								<li class="na-me"><input class="Email" type="text"
+									id="email" value="Email" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Email';}"
+									required=""></li>
+								<li class="na-me"><input class="number" type="text"
+									id="mobile" value="Mobile Number" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Mobile Number';}"
+									required=""></li>
+								<li class="na-me"><input class="age" type="text"
+									id="age" value="Age" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Age';}"
+									required=""></li>
 
 
+								<div class="clearfix"></div>
+							</ul>
+							<div class="sub-bn">
+								<input type="button"
+									style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
+									value="Book Ticket" onclick="bookTicket()">
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+<script>
+function setValue(_this){
+	var busId =  _this.getAttribute("data-busid");
+	$("#selectedBus").val(busId);
+}
+function bookTicket(){
+	debugger;
+	var ticketDetails = {};
+	ticketDetails.busDealer = {};
+	ticketDetails.doj = '${busSearch.doj}';
+	ticketDetails.dor = '${busSearch.dor}';
+	ticketDetails.source = '${busSearch.source}';
+	ticketDetails.destination = '${busSearch.destination}';
+	ticketDetails.busDealer.id = $("#selectedBus").val();
+	ticketDetails.name = $("#name").val();
+	ticketDetails.email = $("#email").val();
+	ticketDetails.mobile = $("#mobile").val();
+	ticketDetails.age = $("#age").val();
+	
+	$.ajax({
+		url: "/ticketBook",
+		method: "POST",
+		contentType: "application/json",
+		data: JSON.stringify(ticketDetails),
+		success: function(data){
+			alert(data);
+		},
+		error: function(error){
+			alert(error);
+		}
+	});
+	
+	
+}
+</script>
 
 <%@ include file="common/footer.jsp"%>

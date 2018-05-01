@@ -1,5 +1,7 @@
 package com.busbooking.controller;
 
+import java.util.Date;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +20,13 @@ import com.busbooking.Service.AgentRegistrationService;
 import com.busbooking.Service.BusDealerService;
 import com.busbooking.Service.BusHireService;
 import com.busbooking.Service.SignUpService;
+import com.busbooking.Service.TicketBookService;
 import com.busbooking.Service.WriteUsService;
 import com.busbooking.model.AgentRegistration;
 import com.busbooking.model.BusHire;
 import com.busbooking.model.BusSearch;
 import com.busbooking.model.SignUp;
+import com.busbooking.model.TicketBook;
 import com.busbooking.model.WriteUs;
 
 @Controller
@@ -42,6 +46,9 @@ public class MenuController {
 	
 	@Autowired
 	private BusDealerService busDealerService;
+	
+	@Autowired
+	TicketBookService ticketBookService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(@ModelAttribute BusSearch busSearch) {
@@ -89,6 +96,11 @@ public class MenuController {
 		return new ResponseEntity<>("Success", HttpStatus.OK);
 	}
 	
+	@RequestMapping(value = "/printTicket", method = RequestMethod.GET)
+	public String printTicket() {
+		return "printTicket";
+	}
+	
 	@RequestMapping(value = "/ticketCancellation", method = RequestMethod.GET)
 	public String ticketCancellation() {
 		return "ticketCancellation";
@@ -105,6 +117,13 @@ public class MenuController {
 	public String saveSignUp(@ModelAttribute SignUp signUp) {
 		signUpService.save(signUp);
 		return "index";
+	}
+	
+	@RequestMapping(value = "/ticketBook", method = RequestMethod.POST)
+	public ResponseEntity<Object> ticketBook(@RequestBody TicketBook ticketBook) {
+		ticketBook.setBookingdate(new Date());
+		ticketBookService.save(ticketBook);
+		return new ResponseEntity<>("Success", HttpStatus.OK);
 	}
 
 }

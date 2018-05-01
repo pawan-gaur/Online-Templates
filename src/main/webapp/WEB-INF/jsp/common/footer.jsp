@@ -114,8 +114,7 @@
 </div>
 <!-- //sign -->
 <!-- signin -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
-	aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content modal-info">
 			<div class="modal-header">
@@ -167,8 +166,7 @@
 </div>
 <!-- //signin -->
 <!-- write us -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog"
-	aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -248,6 +246,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 </body>

@@ -25,7 +25,7 @@ public class BusDealer implements Serializable {
 
 	public BusDealer(String name, String depart, String arrive, String seats, String fee) {
 		super();
-		name = name;
+		this.name = name;
 		this.depart = depart;
 		this.arrive = arrive;
 		this.seats = seats;

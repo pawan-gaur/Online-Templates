@@ -199,7 +199,7 @@
 	<div class="container">
 		<div class="col-md-4 hotes-left wow fadeInRight animated"
 			data-wow-delay=".5s">
-			<h3>1,1s00 +</h3>
+			<h3>1,100 +</h3>
 			<p>Cities with Hotels</p>
 		</div>
 		<div class="col-md-4 hotes-left wow fadeInUp animated"

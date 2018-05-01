@@ -62,10 +62,11 @@
 				<a href="/index">Bus <span>Booking</span></a>
 			</div>
 			<div class="bus wow fadeInUp" data-wow-delay=".5s">
-				<a href="/index" class="buses active">BUSES</a>
-				<a href="/hotels">HOTELS</a>
-				<a href="/bushire">BUS HIRE</a>
+				<a href="/index" class="buses active">Buses</a>
+				<a href="/hotels">Hotels</a>
+				<a href="/bushire">Bus Hire</a>
 				<a href="/agentRegistration">Agent</a>
+				<a href="/printTicket">Ticket Print</a>
 				<a href="/ticketCancellation">Ticket Cancellation</a>
 				<a href="#" data-toggle="modal" data-target="#myModal3">Write Us </a>
 				
