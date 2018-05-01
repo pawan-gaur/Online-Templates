@@ -1,9 +1,13 @@
 package com.busbooking.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +15,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.busbooking.Service.AgentRegistrationService;
+import com.busbooking.Service.BusDealerService;
 import com.busbooking.Service.BusHireService;
 import com.busbooking.Service.SignUpService;
 import com.busbooking.Service.WriteUsService;
 import com.busbooking.model.AgentRegistration;
 import com.busbooking.model.BusHire;
+import com.busbooking.model.BusSearch;
 import com.busbooking.model.SignUp;
 import com.busbooking.model.WriteUs;
 
@@ -33,14 +39,17 @@ public class MenuController {
 
 	@Autowired
 	private SignUpService signUpService;
+	
+	@Autowired
+	private BusDealerService busDealerService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
+	public String home(@ModelAttribute BusSearch busSearch) {
 		return "index";
 	}
 
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String index() {
+	public String index(@ModelAttribute BusSearch busSearch) {
 		return "index";
 	}
 
@@ -54,8 +63,10 @@ public class MenuController {
 		return "bushire";
 	}
 	
-	@RequestMapping(value = "/busSearch", method = RequestMethod.GET)
-	public String busSearch() {
+	@RequestMapping(value = "/busSearch", method = RequestMethod.POST)
+	public String busSearch(@Valid @ModelAttribute("busSearch") BusSearch busSearch, BindingResult result, ModelMap map) {
+		map.addAttribute("busDealer", busDealerService.findAll());
+		map.addAttribute("busSearch", busSearch);
 		return "busSearch";
 	}	
 

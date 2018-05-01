@@ -2164,7 +2164,7 @@ ul.paging{
     width: -moz-min-content;
     width: min-content;
     min-width: 610px;
-    border:10px solid rgba(52, 173, 0, 0.56);
+    border:10px solid rgba(249, 0, 0, 1);
     margin: 12% auto;
     padding: 20px 20px 30px 20px;
     background-color: #FFF;

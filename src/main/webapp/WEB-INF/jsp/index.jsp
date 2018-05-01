@@ -1,3 +1,4 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ include file="common/header.jsp"%>
 
 
@@ -18,36 +19,39 @@
 	<div class="col-md-7 bann-info wow fadeInRight animated"
 		data-wow-delay=".5s">
 		<h2>Online Tickets with Zero Booking Fees</h2>
-		<form>
+		<form:form action="/busSearch" modelAttribute="busSearch" method="POST">
 			<div class="ban-top">
 				<div class="bnr-left">
-					<label class="inputLabel">From</label> <input class="city"
+					<form:label class="inputLabel" path="source">From</form:label> 
+					<form:input class="source" path="source"
 						type="text" value="Enter a city" onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter a city';}"
-						required=>
+						/>
 				</div>
 				<div class="bnr-left">
-					<label class="inputLabel">To</label> <input class="city"
+					<form:label class="inputLabel" path="destination">To</form:label> 
+					<form:input class="city" path="destination"
 						type="text" value="Enter a city" onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter a city';}"
-						required=>
+						 />
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="ban-bottom">
 				<div class="bnr-right">
-					<label class="inputLabel">Date of Journey</label> <input
-						class="date" id="datepicker" type="text" value="dd-mm-yyyy"
+					<form:label class="inputLabel" path="doj">Date of Journey</form:label> 
+					<form:input class="date" path="doj"
+						id="datepicker" type="text" value="dd-mm-yyyy"
 						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-						required=>
+						/>
 				</div>
 				<div class="bnr-right">
-					<label class="inputLabel">Date of Return<span class="opt">&nbsp;(Optional)</span></label>
-					<input class="date" id="datepicker1" type="text" value="dd-mm-yyyy"
+					<form:label class="inputLabel" path="dor">Date of Return<span class="opt">&nbsp;(Optional)</span></form:label>
+					<form:input class="date" path="dor" id="datepicker1" type="text" value="dd-mm-yyyy"
 						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'dd-mm-yyyy';}"
-						required=>
+						 />
 				</div>
 				<div class="clearfix"></div>
 				<!---start-date-piker---->
@@ -63,7 +67,7 @@
 			<div class="sear">
 				<button class="seabtn">Search Buses</button>
 			</div>
-		</form>
+		</form:form>
 	</div>
 	<div class="clearfix"></div>
 </div>
