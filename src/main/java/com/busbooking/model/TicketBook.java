@@ -22,7 +22,7 @@ public class TicketBook {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int bookingid;
 	
-	@JoinColumn(name = "id")
+	@JoinColumn(table="busdealer", referencedColumnName = "id")
 	private BusDealer busDealer;
 	private String busid;
 	private String destination;
