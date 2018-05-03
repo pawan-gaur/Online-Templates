@@ -5,7 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.SignUpRepository;
-import com.busbooking.model.SignUp;
+import com.busbooking.model.Signup;
 
 @Service
 @Transactional
@@ -18,7 +18,7 @@ public class SignUpService {
 		this.signUpRepository = signUpRepository;
 	}
 	
-	public void save(SignUp signUp) {
+	public void save(Signup signUp) {
 		signUpRepository.save(signUp);
 	}
 

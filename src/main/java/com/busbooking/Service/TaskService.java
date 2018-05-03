@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.TaskRepository;
-import com.busbooking.model.Task;
+import com.busbooking.model.Tasks;
 
 @Service
 @Transactional
@@ -21,19 +21,19 @@ public class TaskService {
 		this.taskRepository = taskRepository;
 	}
 	
-	public List<Task> findAll(){
-		List<Task> tasks = new ArrayList<Task>();
-		for(Task task : taskRepository.findAll()){
+	public List<Tasks> findAll(){
+		List<Tasks> tasks = new ArrayList<Tasks>();
+		for(Tasks task : taskRepository.findAll()){
 			tasks.add(task);
 		}
 		return tasks;
 	}
 	
-	public Task findTask(int id){
+	public Tasks findTask(int id){
 		return taskRepository.findOne(id);
 	}
 	
-	public void save(Task task){
+	public void save(Tasks task){
 		taskRepository.save(task);
 	}
 	

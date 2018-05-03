@@ -5,7 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.TicketBookRepository;
-import com.busbooking.model.TicketBook;
+import com.busbooking.model.Ticketbook;
 
 @Service
 @Transactional
@@ -18,7 +18,7 @@ public class TicketBookService {
 		this.ticketBookRepository = ticketBookRepository;
 	}
 	
-	public void save(TicketBook ticketBook){
+	public void save(Ticketbook ticketBook){
 		ticketBookRepository.save(ticketBook);
 	}
 

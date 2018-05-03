@@ -5,7 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.AgentRegistrationRepository;
-import com.busbooking.model.AgentRegistration;
+import com.busbooking.model.Agentregistration;
 
 @Service
 @Transactional
@@ -18,7 +18,7 @@ public class AgentRegistrationService {
 		this.agentRegistrationRepository = agentRegistrationRepository;
 	}
 	
-	public void save(AgentRegistration agentRegistration){
+	public void save(Agentregistration agentRegistration){
 		agentRegistrationRepository.save(agentRegistration);
 	}
 	

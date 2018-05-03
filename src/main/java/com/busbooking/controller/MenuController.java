@@ -22,12 +22,12 @@ import com.busbooking.Service.BusHireService;
 import com.busbooking.Service.SignUpService;
 import com.busbooking.Service.TicketBookService;
 import com.busbooking.Service.WriteUsService;
-import com.busbooking.model.AgentRegistration;
-import com.busbooking.model.BusHire;
+import com.busbooking.model.Agentregistration;
 import com.busbooking.model.BusSearch;
-import com.busbooking.model.SignUp;
-import com.busbooking.model.TicketBook;
-import com.busbooking.model.WriteUs;
+import com.busbooking.model.Bushire;
+import com.busbooking.model.Signup;
+import com.busbooking.model.Ticketbook;
+import com.busbooking.model.Writeus;
 
 @Controller
 public class MenuController {
@@ -79,7 +79,7 @@ public class MenuController {
 
 	@RequestMapping(value = "/saveBusHire", method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Object> saveBusHire(@RequestBody BusHire busHire) {
+	public ResponseEntity<Object> saveBusHire(@RequestBody Bushire busHire) {
 		busHireService.save(busHire);
 		return new ResponseEntity<Object>("Success", HttpStatus.OK);
 	}
@@ -91,7 +91,7 @@ public class MenuController {
 
 	@RequestMapping(value = "/saveAgentDetails", method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Object> saveAgent(@RequestBody AgentRegistration agentRegistration) {
+	public ResponseEntity<Object> saveAgent(@RequestBody Agentregistration agentRegistration) {
 		agentRegistrationService.save(agentRegistration);
 		return new ResponseEntity<>("Success", HttpStatus.OK);
 	}
@@ -107,20 +107,20 @@ public class MenuController {
 	}
 
 	@RequestMapping(value = "/saveWriteUs", method = RequestMethod.POST)
-	public ResponseEntity<Object> saveWriteUs(@RequestBody WriteUs writeUs) {
+	public ResponseEntity<Object> saveWriteUs(@RequestBody Writeus writeUs) {
 		writeUsService.save(writeUs);
 		return new ResponseEntity<>("Success", HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/saveSignup", method = RequestMethod.POST, consumes = {
 			"application/x-www-form-urlencoded" })
-	public String saveSignUp(@ModelAttribute SignUp signUp) {
+	public String saveSignUp(@ModelAttribute Signup signUp) {
 		signUpService.save(signUp);
 		return "index";
 	}
 	
 	@RequestMapping(value = "/ticketBook", method = RequestMethod.POST)
-	public ResponseEntity<Object> ticketBook(@RequestBody TicketBook ticketBook) {
+	public ResponseEntity<Object> ticketBook(@RequestBody Ticketbook ticketBook) {
 		ticketBook.setBookingdate(new Date());
 		ticketBookService.save(ticketBook);
 		return new ResponseEntity<>("Success", HttpStatus.OK);

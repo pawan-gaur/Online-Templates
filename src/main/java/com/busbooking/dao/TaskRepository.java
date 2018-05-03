@@ -2,8 +2,8 @@ package com.busbooking.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.busbooking.model.Task;
+import com.busbooking.model.Tasks;
 
-public interface TaskRepository extends CrudRepository<Task, Integer> {
+public interface TaskRepository extends CrudRepository<Tasks, Integer> {
 
 }

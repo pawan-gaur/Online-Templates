@@ -44,7 +44,7 @@
 					</div>
 					<div class="bus-txt">
 						<!-- <h4>Himachal Express Tourist</h4> -->
-						<h4>${busDealer.name}</h4>
+						<h4>${busDealer.agencyname}</h4>
 						<p>A/C Sleeper (2+2)</p>
 					</div>
 					<div class="clearfix"></div>
@@ -107,9 +107,8 @@
 			</div>
 			<section>
 				<div class="modal-body modal-spa">
-					<div class="writ">
+					<div class="writ" id="ticketSuccess">
 						<h4>Enter Below Details to Confirm Your Ticket</h4>
-						<p id="msg"></p>
 						<form>
 							<ul>
 								<li class="na-me"><input class="name" type="text" id="name"
@@ -152,12 +151,12 @@ function setValue(_this){
 function bookTicket(){
 	debugger;
 	var ticketDetails = {};
-	ticketDetails.busDealer = {};
+	ticketDetails.busdealer = {};
 	ticketDetails.doj = '${busSearch.doj}';
 	ticketDetails.dor = '${busSearch.dor}';
 	ticketDetails.source = '${busSearch.source}';
 	ticketDetails.destination = '${busSearch.destination}';
-	ticketDetails.busDealer.id = $("#selectedBus").val();
+	ticketDetails.busdealer.id = $("#selectedBus").val();
 	ticketDetails.name = $("#name").val();
 	ticketDetails.email = $("#email").val();
 	ticketDetails.mobile = $("#mobile").val();
@@ -169,7 +168,9 @@ function bookTicket(){
 		contentType: "application/json",
 		data: JSON.stringify(ticketDetails),
 		success: function(data){
-			alert(data);
+			if(data == "Success"){
+				$("#ticketSuccess").html("<h4>Ticket Booked Successfully <br> Your Ticket No : XXXXXXX. You will also get Soft copy on mail</h4>");	
+			}
 		},
 		error: function(error){
 			alert(error);

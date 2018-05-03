@@ -5,7 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.WriteUsRepository;
-import com.busbooking.model.WriteUs;
+import com.busbooking.model.Writeus;
 
 @Service
 @Transactional
@@ -18,7 +18,7 @@ public class WriteUsService {
 		this.writeUsRepository = writeUsRepository;
 	}
 	
-	public void save(WriteUs writeUs) {
+	public void save(Writeus writeUs) {
 		writeUsRepository.save(writeUs);
 	}
 

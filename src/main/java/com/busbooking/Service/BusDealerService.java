@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.busbooking.dao.BusDealerRepository;
-import com.busbooking.model.BusDealer;
+import com.busbooking.model.Busdealer;
 
 @Service
 @Transactional
@@ -21,9 +21,9 @@ public class BusDealerService {
 		this.busDealerRepository = busDealerRepository;
 	}
 	
-	public List<BusDealer> findAll(){
-		List<BusDealer> busDealer = new ArrayList<BusDealer>();
-		for(BusDealer busDeal : busDealerRepository.findAll()){
+	public List<Busdealer> findAll(){
+		List<Busdealer> busDealer = new ArrayList<Busdealer>();
+		for(Busdealer busDeal : busDealerRepository.findAll()){
 			busDealer.add(busDeal);
 		}
 		return busDealer;	

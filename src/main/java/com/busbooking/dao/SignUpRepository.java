@@ -1,11 +1,9 @@
 package com.busbooking.dao;
 
-import java.io.Serializable;
-
 import org.springframework.data.repository.CrudRepository;
 
-import com.busbooking.model.SignUp;
+import com.busbooking.model.Signup;
 
-public interface SignUpRepository extends CrudRepository<SignUp, Integer> {
+public interface SignUpRepository extends CrudRepository<Signup, Integer> {
 
 }

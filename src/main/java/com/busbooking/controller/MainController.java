@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.busbooking.Service.TaskService;
-import com.busbooking.model.Task;
+import com.busbooking.model.Tasks;
 
 @Controller
 public class MainController {
@@ -41,7 +41,7 @@ public class MainController {
 	}
 	
 	@PostMapping("/save-task")
-	public String saveTask(@ModelAttribute Task task ,BindingResult bindingResult ,HttpServletRequest request){
+	public String saveTask(@ModelAttribute Tasks task ,BindingResult bindingResult ,HttpServletRequest request){
 		task.setDateCreated(new Date());
 		taskService.save(task);
 		request.setAttribute("tasks", taskService.findAll());
