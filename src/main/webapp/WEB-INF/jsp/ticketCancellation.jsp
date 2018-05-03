@@ -42,25 +42,28 @@
 </div>
 
 <script>
-	function saveBusHire() {
-		var bushire = {};
-		bushire.source = $("#source").val();
-		bushire.destination = $("#destination").val();
-		bushire.doj = $("#doj").val();
-		bushire.dor = $("#dor").val();
-		bushire.total_person = $("#total_person").val();
-		$.ajax({
-			url : "saveBusHire",
-			method : "POST",
-			data : JSON.stringify(bushire),
-			contentType : "application/JSON",
-			success : function(data) {
-				if (data == "Success") {
-					$("#msg").html("We have received your Booking request, Our representative will call you soon")
-				}
+function bookTicket(){
+	var ticketCancel = {};
+	ticketCancel.bookingId = $("#bookingid").val();
+	ticketCancel.email = $("#email").val();
+	
+	$.ajax({
+		url: "/ticketCancellation",
+		method: "POST",
+		contentType: "application/json",
+		data: JSON.stringify(ticketCancel),
+		success: function(data){
+			if(data == "Success"){
+				$("#ticketCancel").html("<h4>Your Ticket No : XXXXXXX<br> Cancelled Successfully <br>You will also get for the Same on mail</h4>");	
 			}
-		});
-	}
+		},
+		error: function(error){
+			alert(error);
+		}
+	});
+	
+	
+}
 </script>
 
 <%@ include file="common/footer.jsp"%>
