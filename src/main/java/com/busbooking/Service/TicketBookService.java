@@ -21,5 +21,9 @@ public class TicketBookService {
 	public void save(Ticketbook ticketBook){
 		ticketBookRepository.save(ticketBook);
 	}
+	
+	public Ticketbook findTicket(int bookingid){
+		return ticketBookRepository.findOne(bookingid);
+	}
 
 }

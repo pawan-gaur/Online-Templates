@@ -26,6 +26,7 @@ import com.busbooking.model.Agentregistration;
 import com.busbooking.model.BusSearch;
 import com.busbooking.model.Bushire;
 import com.busbooking.model.Signup;
+import com.busbooking.model.TicketSearch;
 import com.busbooking.model.Ticketbook;
 import com.busbooking.model.Writeus;
 
@@ -97,7 +98,13 @@ public class MenuController {
 	}
 	
 	@RequestMapping(value = "/printTicket", method = RequestMethod.GET)
-	public String printTicket() {
+	public String getTicket() {
+		return "printTicket";
+	}
+	
+	@RequestMapping(value = "/printTicket", method = RequestMethod.POST)
+	public String ticketPrint(@RequestBody TicketSearch ticket, ModelMap map) {
+		map.addAttribute("ticketDetails", ticketBookService.findTicket(ticket.getBookingId()));
 		return "printTicket";
 	}
 	

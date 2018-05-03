@@ -18,14 +18,14 @@
 					<label class="inputLabel">Ticket No</label> <input class="city"
 						id="bookingid" type="text" value="Enter Ticket No"
 						onfocus="this.value = '';"
-						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						onblur="if (this.value == '') {this.value = 'Enter Ticket No';}"
 						required=>
 				</div>
 				<div class="bnr-left">
 					<label class="inputLabel">Email</label> <input class="city"
 						id="email" type="text" value="Enter Email Id"
 						onfocus="this.value = '';"
-						onblur="if (this.value == '') {this.value = 'Enter a city';}"
+						onblur="if (this.value == '') {this.value = 'Enter Email Id';}"
 						required=>
 				</div>
 				<div class="clearfix"></div>
@@ -33,7 +33,7 @@
 			<div class="sear">
 				<input class="seabtn"
 					style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
-					type="button" value="Print Ticket" onclick="print()">
+					type="button" value="Print Ticket" onclick="printTicket()">
 			</div>
 		</form>
 	</div>
@@ -41,20 +41,22 @@
 	<br>
 </div>
 
+<div id="printTicketDetails">
+	${ticketDetails.bookingid}
+</div>
+
 <script>
-	function saveBusHire() {
+	function printTicket() {
 		var ticketDetails = {};
-		bushire.bookingid = $("#bookingid").val();
-		bushire.email = $("#email").val();
+		ticketDetails.bookingId = $("#bookingid").val();
+		ticketDetails.email = $("#email").val();
 		$.ajax({
-			url : "saveBusHire",
+			url : "printTicket",
 			method : "POST",
 			data : JSON.stringify(ticketDetails),
 			contentType : "application/JSON",
 			success : function(data) {
-				if (data == "Success") {
-					$("#msg").html("We have received your Booking request, Our representative will call you soon")
-				}
+				$("#printTicketDetails").html("TicketDetails")
 			}
 		});
 	}
