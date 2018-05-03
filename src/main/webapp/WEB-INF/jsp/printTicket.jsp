@@ -16,7 +16,7 @@
 			<div class="ban-top">
 				<div class="bnr-left">
 					<label class="inputLabel">Ticket No</label> <input class="city"
-						id="ticket" type="text" value="Enter Ticket No"
+						id="bookingid" type="text" value="Enter Ticket No"
 						onfocus="this.value = '';"
 						onblur="if (this.value == '') {this.value = 'Enter a city';}"
 						required=>
@@ -43,16 +43,13 @@
 
 <script>
 	function saveBusHire() {
-		var bushire = {};
-		bushire.source = $("#source").val();
-		bushire.destination = $("#destination").val();
-		bushire.doj = $("#doj").val();
-		bushire.dor = $("#dor").val();
-		bushire.total_person = $("#total_person").val();
+		var ticketDetails = {};
+		bushire.bookingid = $("#bookingid").val();
+		bushire.email = $("#email").val();
 		$.ajax({
 			url : "saveBusHire",
 			method : "POST",
-			data : JSON.stringify(bushire),
+			data : JSON.stringify(ticketDetails),
 			contentType : "application/JSON",
 			success : function(data) {
 				if (data == "Success") {
