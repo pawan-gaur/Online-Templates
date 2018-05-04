@@ -69,8 +69,7 @@
 </div>
 <!--- /copy-right ---->
 <!-- sign -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-	aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -179,43 +178,44 @@
 				<div class="modal-body modal-spa">
 					<div class="writ">
 						<h4>HOW CAN WE HELP YOU</h4>
-						<p id="msg"></p>
-						<form>
-							<ul>
-								<li class="na-me"><input class="name" type="text" id="name"
-									value="Name" onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Name';}"
-									required=""></li>
-								<li class="na-me"><input class="Email" type="text" id="email"
-									value="Email" onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Email';}"
-									required=""></li>
-								<li class="na-me"><input class="number" type="text" id="mobile"
-									value="Mobile Number" onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Mobile Number';}"
-									required=""></li>
-								<li class="na-me"><select id="issue"
-									onchange="change_country(this.value)"
-									class="frm-field required sect">
-										<option value="null">Select Issue</option>
-										<option value="null">Booking Issues</option>
-										<option value="null">Bus Cancellation</option>
-										<option value="null">Refund</option>
-										<option value="null">Wallet</option>
-										<option value="null">Other</option>
-								</select></li>
-								<li class="descrip"><input class="special" type="text" id="description"
-									value="Write Description" onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Write Description';}"
-									required=""></li>
-								<div class="clearfix"></div>
-							</ul>
-							<div class="sub-bn">
-								<input type="button"
-									style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
-									value="Submit" onclick="saveWriteUs()">
-							</div>
-						</form>
+						<div id="writeUsSuccess">
+							<form>
+								<ul>
+									<li class="na-me"><input class="name" type="text" id="name"
+										value="Name" onfocus="this.value = '';"
+										onblur="if (this.value == '') {this.value = 'Name';}"
+										required=""></li>
+									<li class="na-me"><input class="Email" type="text" id="email"
+										value="Email" onfocus="this.value = '';"
+										onblur="if (this.value == '') {this.value = 'Email';}"
+										required=""></li>
+									<li class="na-me"><input class="number" type="text" id="mobile"
+										value="Mobile Number" onfocus="this.value = '';"
+										onblur="if (this.value == '') {this.value = 'Mobile Number';}"
+										required=""></li>
+									<li class="na-me"><select id="issue"
+										onchange="change_country(this.value)"
+										class="frm-field required sect">
+											<option value="null">Select Issue</option>
+											<option value="null">Booking Issues</option>
+											<option value="null">Bus Cancellation</option>
+											<option value="null">Refund</option>
+											<option value="null">Wallet</option>
+											<option value="null">Other</option>
+									</select></li>
+									<li class="descrip"><input class="special" type="text" id="description"
+										value="Write Description" onfocus="this.value = '';"
+										onblur="if (this.value == '') {this.value = 'Write Description';}"
+										required=""></li>
+									<div class="clearfix"></div>
+								</ul>
+								<div class="sub-bn">
+									<input type="button"
+										style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
+										value="Submit" onclick="saveWriteUs()">
+								</div>
+							</form>
+						</div>
 						<script>
 							function saveWriteUs(){
 								var writeus = {};
@@ -231,7 +231,7 @@
 									contentType : "application/JSON",
 									success : function(data){
 										if(data == "Success"){
-											$("#msg").html("We have received your query. Will respond to You..!")
+											$("#writeUsSuccess").html("<h4>We have received your query. Will respond to You..!</h4>")
 										}
 									}
 								});

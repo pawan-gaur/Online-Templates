@@ -121,7 +121,7 @@ public class MenuController {
 
 	@RequestMapping(value = "/saveSignup", method = RequestMethod.POST, consumes = {
 			"application/x-www-form-urlencoded" })
-	public String saveSignUp(@ModelAttribute Signup signUp) {
+	public String saveSignUp(@ModelAttribute Signup signUp,@ModelAttribute BusSearch busSearch) {
 		signUpService.save(signUp);
 		return "index";
 	}
