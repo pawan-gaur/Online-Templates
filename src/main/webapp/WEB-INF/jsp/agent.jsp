@@ -17,27 +17,28 @@
 			<div class="ag-bt">
 				<a class="regist" href="#">Register Online &amp; Start Now</a>
 			</div>
-			<p id="msg">Please fill below form. We will call you back</p>
-			<form>
-				<input type="text" id="name" placeholder="Name"> <input
-					type="text" id="email" placeholder="Email"> <input
-					type="text" id="organization" placeholder="Organization"> <input
-					type="text" id="phone" placeholder="Phone"> <input
-					type="text" id="city" placeholder="City"> <select
-					name="state" id="state" class="grayTextNormal">
-					<option value="-- Select State --">-- Select State --</option>
-					<option value="Delhi">Delhi</option>
-					<option value="Rajasthan">Rajasthan</option>
-					<option value="Himachal Pradesh">Himachal Pradesh</option>
-					<option value="Uttar Pradesh">Uttar Pradesh</option>
-				</select>
-				<textarea id="message" placeholder="Message"></textarea>
-				<div class="sub">
-					<input type="button"
-						style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
-						value="Submit" onclick="saveAgentDetails()">
-				</div>
-			</form>
+			<div id="agentRegistrationMsg">
+				<form>
+					<input type="text" id="name" placeholder="Name"> <input
+						type="text" id="email" placeholder="Email"> <input
+						type="text" id="organization" placeholder="Organization"> <input
+						type="text" id="phone" placeholder="Phone"> <input
+						type="text" id="city" placeholder="City"> <select
+						name="state" id="state" class="grayTextNormal">
+						<option value="-- Select State --">-- Select State --</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+					</select>
+					<textarea id="message" placeholder="Message"></textarea>
+					<div class="sub">
+						<input type="button"
+							style="padding: 6px 25px !important; font-size: 16px; text-indent: 0; padding: 6px 20px; color: #fff; background-color: #ff0000; border: 0; border-radius: 2px; -webkit-transition: all .2s; -moz-transition: all .2s; transition: all .2s; background-repeat: no-repeat; background-position: 96% center;"
+							value="Submit" onclick="saveAgentDetails()">
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="col-md-6 agent-right wow fadeInUp animated"
 			data-wow-delay=".5s">
@@ -70,19 +71,16 @@
 		agent.city = $("#city").val();
 		agent.state = $("#state").val();
 		agent.message = $("#message").val();
-		$
-				.ajax({
-					url : "saveAgentDetails",
-					method : "POST",
-					data : JSON.stringify(agent),
-					contentType : "application/json",
-					success : function(data) {
-						if (data == "Success") {
-							$("#msg")
-									.html(
-											"We received you details, Our representative will contact you soon...")
-						}
-					}
-				});
+		$.ajax({
+			url : "saveAgentDetails",
+			method : "POST",
+			data : JSON.stringify(agent),
+			contentType : "application/json",
+			success : function(data) {
+				if (data == "Success") {
+					$("#agentRegistrationMsg").html("<h4>We received you details, Our representative will contact you soon...</h4>")
+				}
+			}
+		});
 	}
 </script>
