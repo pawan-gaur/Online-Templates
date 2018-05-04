@@ -129,8 +129,8 @@ public class MenuController {
 	@RequestMapping(value = "/ticketBook", method = RequestMethod.POST)
 	public ResponseEntity<Object> ticketBook(@RequestBody Ticketbook ticketBook) {
 		ticketBook.setBookingdate(new Date());
-		ticketBookService.save(ticketBook);
-		return new ResponseEntity<>("Success", HttpStatus.OK);
+		Integer bookingId = ticketBookService.save(ticketBook);
+		return new ResponseEntity<>(bookingId, HttpStatus.OK);
 	}
 
 }

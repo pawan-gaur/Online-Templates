@@ -18,8 +18,9 @@ public class TicketBookService {
 		this.ticketBookRepository = ticketBookRepository;
 	}
 	
-	public void save(Ticketbook ticketBook){
-		ticketBookRepository.save(ticketBook);
+	public int save(Ticketbook ticketBook){
+		ticketBook = ticketBookRepository.save(ticketBook);
+		return ticketBook.getBookingid();
 	}
 	
 	public Ticketbook findTicket(int bookingid){

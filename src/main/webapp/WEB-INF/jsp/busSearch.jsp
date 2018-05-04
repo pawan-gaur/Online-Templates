@@ -168,9 +168,7 @@ function bookTicket(){
 		contentType: "application/json",
 		data: JSON.stringify(ticketDetails),
 		success: function(data){
-			if(data == "Success"){
-				$("#ticketSuccess").html("<h4>Ticket Booked Successfully <br> Your Ticket No : XXXXXXX. You will also get Soft copy on mail</h4>");	
-			}
+			$("#ticketSuccess").html("<h4>Ticket Booked Successfully <br> Your Ticket No : "+data+". You will also get Soft copy on mail</h4>");	
 		},
 		error: function(error){
 			alert(error);
